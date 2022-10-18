@@ -1,0 +1,19 @@
+##StopIteration
+
+clas = {'1반' : [167, 180, 195, 205, 175], '2반' : [170, 157, 184, 192, 202]}
+
+for clas1, height in clas.items() :
+    try:
+        for height1 in height:
+            if height1 >= 190:
+                print("190cm이상인 학생이 있습니다.")
+                raise StopIteration
+    except:
+        break
+for clas1, height in clas.items():
+    key = 0
+    for height1 in height:
+        if height1 >= 190:
+            print(height1)
+            key += 1
+    print("{}반에는 190cm이상인 학생이 {}명 있습니다.".format(clas1, key))
